@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Informações</title>
+
+	<script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/meuEstilo.css">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+</head>
+<body>
+	<div data-role="page">
+		
+		<div data-role="header" data-theme="b">
+			<a href="index.html" data-role="button" data-icon="home" data-transition="flip" data-direction="reverse">Inicio</a>
+			<h3>INFO-BUS</h3>
+			<a href="horarios.html" data-role="button" data-icon="bars" data-transition="flip">Horarios</a>
+	    </div>
+
+	    <div data-rola="content">
+			
+			<center>
+				<img src="img/icon2.png" alt="">
+			</center>
+
+	    	<div data-role="collapsible" data-theme="b" data-collapsed="false">
+			<h2>Informações das Linhas</h2>
+			<p>Veja as informações importantes como o valor atualizado das passagens</p>
+
+			<div data-role="collapsible" data-theme="b" data-collapsed="false">
+				<h3> Sorocaba/Itu - Linha 6209 - "Estrada Velha"</h3>
+				<p>Atualizado em 19/03/2016</p>
+				<ul data-role="listview" data-inset="true">
+				<li data-icon="info">
+					<a href="#p6209" data-rel="popup" data-transition="flip" data-position-to="window">
+					  <img src="img/icon4.png">
+					  <h2>Passagem</h2>
+					  <p>Veja os preços Atualizados das Passagens</p>
+					</a>
+				</li>
+				<li data-icon="info">
+					<a href="#em6209" data-rel="popup" data-transition="flip" data-position-to="window">
+						<img src="img/icon5.png" alt="">
+							<h2>Empresas</h2>
+							<p>Veja quais empresas fazem o transporte</p>
+						</img>
+					</a>
+				</li>
+				<li data-icon="info">
+					<a href="#end6209" data-rel="popup" data-transition="flip" data-position-to="window">
+						<img src="img/icon6.png" alt="">
+							<h2>Itinerario</h2>
+							<p>Veja a Via Expressa Principal</p>
+						</img>
+					</a>
+				</li>
+			</ul>
+			</div>
+
+		</div>
+	    </div>
+
+	    <div data-role="footer" data-theme="b" data-position="fixed">
+			<p><small>Copyrigth &copy - Gabriel de Padua</small></p>
+	 	</div>
+
+	 	<!-- popup Preco da passagem - linha 6209 -->
+ 	<div id="p6209" data-role="popup" data-theme="b" data-overlay-theme="b" data-corners="false" data-dismissible="false">
+ 	 <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">fechar</a>
+ 	   <div data-role="header" data-theme="a">
+ 	   	  <h2>Preços</h2>
+ 	   </div>
+ 	 <table data-role="table" id="movie-table-custom" data-mode="reflow" class="movie-list">
+  		<thead>
+    		<tr>
+      			<th data-priority="1">Tipo</th>
+      			<th style="width:40%">Preço</th>
+    		</tr>
+  		</thead>
+
+		  <tbody>
+		    <tr>
+		      <td>Normal</td>
+		      <td>R$ 5,25</td>
+		     </tr>
+		    <tr>
+		      <td>Estudante</td>
+		      <td>R$ 2,50 - Com Carterinha</td>
+		    </tr>
+		    <tr>
+		      <td>Idoso</td>
+		      <td>Gratuito para maiores de 60 anos</td>
+		    </tr>
+		    
+		  </tbody>
+	</table>
+  </div>
+
+  <div id="em6209" data-role="popup" data-theme="b" data-overlay-theme="b" data-corners="false" data-dismissible="false">
+ 	 <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">fechar</a>
+ 	  <div data-role="header" data-theme="a">
+ 	   	  <h2>Empresas</h2>
+ 	   </div>
+  	   <ul data-role="listview">
+          <li data-role="list-divider">Viação</li>
+          <li>
+          	 <img src="img/logo2.jpg" style="width: 300px; height: 200px;">
+          	 <h5>Rapido Luxo Campinas</h5>
+          </li>
+          <li data-role="list-divider">Linha</li>
+           <li>
+           	 <img src="img/logo1.png" style="width: 100px; height: 50px;">
+             <h5>Empresa Metropolitana de Transportes Urbanos de São Paulo</h5>
+           </li>	
+  	   </ul>
+  </div>
+
+  <!-- popup Itinerario - linha 6209 -->
+  <div id="end6209" data-role="popup" data-theme="b" data-overlay-theme="b" data-corners="false" data-dismissible="false">
+ 	 <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">fechar</a>
+ 	  <div data-role="header" data-theme="a">
+ 	   	  <h2>Pontos</h2>
+ 	   </div>
+  	  <ul data-role="listview">
+  	    <li data-role="list-divider">Partida, Chegada e Via Expressa</li>
+  	  	<li>
+  	  		<h4>Rodoviaria Sorocaba</h4>
+  	  		<p>Av. Comendador Pereira Inácio, 100 - Jardim Vergueiro</p>
+  	  	</li>
+  	  	<li>
+  	  		<h4>Via Rodovia SP-79</h4>
+  	  		<p>Via Pirapitinguie/Cidade Nova</p>
+  	  	</li>
+  	  	<li>
+  	  		<h4>Rodoviaria Itu</h4>
+  	  		<p>Av. Dr. Otaviano Pereira Mendes - Jardim Novo</p>
+  	  	</li>
+  	  </ul>
+  </div>
+
+
+
+	</div>
+</body>
+</html>
