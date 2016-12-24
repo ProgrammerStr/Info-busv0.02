@@ -4,7 +4,7 @@
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Horarios Sorocaba</title>
+	<title>Horários Sorocaba</title>
 
     <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
@@ -21,9 +21,9 @@
   <div data-role="page">
   	
   	<div data-role="header" data-theme="b">
-		<a href="index.html" data-role="button" data-icon="home" data-transition="slidedown">Inicio</a>
+		<a href="horarios.html" data-role="button" data-icon="back" data-transition="slidedown">Voltar</a>
 		<h3>Sorocaba ate Itu</h3>
-		<a href="#saida" data-rel="popup" data-role="button" data-icon="clock" data-position-to="window" data-transition="flip">Proxima Saida</a>
+		<a href="#saida" data-rel="popup" data-role="button" data-icon="clock" data-position-to="window" data-transition="flip" onclick="horario()">Proxima Saída</a>
 	 </div>
 
 	 <div data-role="content" data-theme="b">
@@ -36,7 +36,7 @@
  		<table data-role="table" id="movie-table-custom" data-mode="reflow" class="movie-list" data-filter="true" data-filter-placeholder="Procurar....">
   		<thead>
     		<tr>
-      			<th data-priority="1">Saida</th>
+      			<th data-priority="1">Saída</th>
       			<th style="width:40%">Chegada Prevista</th>
     		</tr>
   </thead>
@@ -77,14 +77,42 @@
 	 <div id="saida" data-role="popup" data-theme="b" data-corners="false" data-dismissible="false">
 	 	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">fechar</a>
 	 	<div data-role="header" data-theme="a">
-	 		<h1>O proximo onibus sai:</h1>
+	 		<h1>Próximo:</h1>
 	 	</div>
 	 	<div data-role="content" data-theme="b">
-	 		<center><h1>XX:XX</h1></center>
+	 		<h1 id="prox"></h1>
+	 		<center><img src="img/time.png" alt=""></center>
 	 	</div>
 	 </div>
 
   </div>
+  
+  <script type="text/javascript">
+        
+        var saidas = ["05:00", "05:45", "05:55", "06:15", "06:45", "07:30", "08:15" ,"09:15",
+                                 "10:15", "11:15", "12:00", "13:15", "14:15", "15:15", "16:15", "17:00",
+                                 "17:45", "18:30", "19:50", "21:00", "22:30"];
+          
+        function horario() {
+            hoje = new Date();
+            h = hoje.getHours();
+            m = hoje.getMinutes();
+            hm = h+":"+m;
+            
+            for(var i = 0; i < saidas.length; i++)
+            {
+                 if (hm > saidas[saidas.length - 1]) {
+                    document.getElementById('prox').innerHTML = saidas[0];
+                    break;
+                } else if (hm <= saidas[i]) {
+                    document.getElementById('prox').innerHTML = saidas[i];
+                    break;
+                }
+            }
+            
+            setTimeout('horario()', 100);
+        }
+    </script>
 
 	
 </body>

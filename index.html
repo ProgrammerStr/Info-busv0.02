@@ -1,82 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 
-	<meta charset="UTF-8">
-	<!-- Meta tags para busca no google -->
-	<META NAME="DESCRIPTION" CONTENT="Aplicativo para ver horários de onibus em Sorocaba e itu">
-	<meta name="author" content="Gabriel Padua">
-	<META NAME="ABSTRACT" CONTENT="Horarios onibus sorocaba e regiao ">
-	<META NAME="KEYWORDS" CONTENT="onibus, horarios, sorocaba, itu, emtu, fatec">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Inicio</title>
-    
-    <!-- Carregamento dos arquivos js do jquery e jquey mobile --> 
-	<script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
-	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
-    
+    <meta charset="UTF-8">
+    <!-- Meta tags para busca no google -->
+    <META NAME="DESCRIPTION" CONTENT="Aplicativo para ver horários de ônibus entre Sorocaba e itu">
+    <meta name="author" content="Gabriel Padua">
+    <META NAME="ABSTRACT" CONTENT="Horarios ônibus sorocaba e região ">
+    <META NAME="KEYWORDS" CONTENT="onibus, horarios, sorocaba, itu, emtu, fatec, infobus, aplicativo, site">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+
+    <!-- Carregamento dos arquivos js do jquery e jquey mobile -->
+    <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
     <!-- Carregamento das folhas de estilo do jquery mobile -->
-	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
 
     <!-- Carragamento das fontos externas do google fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
 
-	<!-- Carregamento do meu arquivo de estilo -->
-	<link rel="stylesheet" type="text/css" href="css/meuEstilo.css">
-	
-	<!-- Carregamento de imagem para icone mostrado na barra do navegador -->
-	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Carregamento do meu arquivo de estilo -->
+    <link rel="stylesheet" type="text/css" href="css/meuEstilo.css">
+
+    <!-- Carregamento de imagem para icone mostrado na barra do navegador -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 
 </head>
+
 <body>
-   <div data-role="page">
+    <div data-role="page">
 
-     <!-- Barra de cabeçalho com botoes para panel de menu e formulario de contato -->
-	 <div data-role="header" data-theme="b">
-		<a href="#menu" data-role="button" data-icon="bullets">Menu</a>
-		<h3>INFO-BUS 2.0</h3>
-		<a href="#contato" data-role="button" data-icon="mail">Contato</a>
-	 </div>
+        <!-- Barra de cabeçalho com botoes para panel de menu e formulario de contato -->
+        <div data-role="header" data-theme="b">
+            <a href="#menu" data-role="button" data-icon="bars" class="cortana">Menu</a>
+            <h1 class="cortana">INFO-BUS 2.0</h1>
+            <a href="#contato" data-role="button" data-icon="mail" class="cortana">Contato</a>
+        </div>
 
-   <!-- Conteudo da index fazendo a apresentação do app -->
-	 <div data-role="content" id="cont">
-		 <center><img src="img/icon1.png">
-		 <h1>Bem vindo ao INFO-BUS</h1>
-		 <h2>Veja os horários de onibus entre as cidades de Sorocaba e região assim como informaçoes sobre passagens e linhas</h2>
-		 </center>
-	 </div>
+        <!-- Conteudo da index fazendo a apresentação do app -->
+        <div data-role="content" id="cont">
+            <center><img src="img/icon1.png">
+                <h1>Bem-vindo ao INFO-BUS</h1>
+                <h2>Veja os horários de ônibus entre as cidades de Sorocaba e região assim como informações sobre passagens e linhas</h2>
+            </center>
+        </div>
 
-   <!-- Rodape -->
-	 <div data-role="footer" data-theme="b" data-position="fixed">
-		<p><small>Copyrigth &copy - Gabriel Padua</small></p>
-	 </div>
+        <!-- Rodape -->
+        <div data-role="footer" data-theme="b" data-position="fixed">
+            <p><small>Copyrigth &copy - Gabriel Pádua</small></p>
+        </div>
 
-   <!-- Painel de menu com botões e acesso aos conteudos do app -->
-	<div data-role="panel" id="menu" data-theme="b" data-position="left" data-display="overlay">
-		<center><h2>Opções</h2></center>
-		<p>Utilize o menu para ver os horários e informaçoes das linhas</p>
-		<p>Deslize o dedo ou aperte ESC para fechar o painel</p>
-		<div data-role="controlgroup">
-			<a href="horarios.html" data-role="button" data-icon="bars" data-transition="flip">Horarios</a>
-			<a href="info.html" data-role="button" data-icon="info" data-transition="flip">Informações</a>
-		</div>
-	</div>
+        <!-- Painel de menu com botões e acesso aos conteudos do app -->
+        <div data-role="panel" id="menu" data-theme="b" data-position="left" data-display="overlay">
+            <center>
+                <h2>Opções</h2></center>
+            <p>Utilize o menu para ver os horários e informações das linhas</p>
+            <p>Deslize o dedo ou aperte ESC para fechar o painel</p>
+            <div data-role="controlgroup">
+                <a href="horarios.html" data-role="button" data-icon="clock" data-transition="flip">Horários</a>
+                <a href="info.html" data-role="button" data-icon="info" data-transition="flip">Informações</a>
+            </div>
+        </div>
 
-   <!-- Painel do formulario de contato -->
-	<div data-role="panel" id="contato" data-theme="b" data-position="right" data-display="overlay">
-		<center><h2>Contato do Desenvolvedor</h2></center>
- 		<p>Envie Sugestões de linhas e horários de Sorocaba para sua cidade:</p>
-		 <form action="contato.php" method="post">
-			 <label for="nome">Nome:</label>
-			 <input type="text" name="nome" value="" autofocus required>
-			 <label for="email">Email:</label>
-			 <input type="text" name="email" value="" required>
-			 <label for="msg">Menssagem</label>
-			 <textarea rows="5" cols="10" name="msg" required></textarea>
-			 <input type="submit" name="submit" value="Enviar">
-		 </form>
-	</div>
+        <!-- Painel do formulario de contato -->
+        <div data-role="panel" id="contato" data-theme="b" data-position="right" data-display="overlay">
+            <center>
+                <h2>Contato do Desenvolvedor</h2></center>
+            <p>Envie Sugestões de linhas e horários de Sorocaba para sua cidade:</p>
+            <form action="contato.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" value="" autofocus required>
+                <label for="email">Email:</label>
+                <input type="text" name="email" value="" required>
+                <label for="msg">Menssagem</label>
+                <textarea rows="5" cols="10" name="msg" required></textarea>
+                <input type="submit" name="submit" value="Enviar">
+            </form>
+        </div>
 
-   </div>
+    </div>
+
+    <div id="preloader">
+          <h1>Carregando</h1>
+        <div id="loader"></div>
+
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(window).load(function () {
+                $('#loader').delay(800).fadeOut("slow", function () {
+                    $('#preloader').delay(800).fadeOut("slow");
+                });
+            });
+
+        });
+    </script>
 </body>
+
+
 </html>
